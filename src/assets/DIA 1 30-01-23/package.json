@@ -1,0 +1,26 @@
+{
+  "name": "retos1",
+  "version": "1.0.0",
+  "description": "",
+  "main": "retos1.js",
+  "scripts": {
+  },
+  "keywords": [
+    "lenguaje",
+    "programacion",
+    "javascript",
+    "node",
+    "variables",
+    "vs",
+    "constantes",
+    "tipos",
+    "básicos",
+    "de",
+    "datos."
+  ],
+  "author": "Celia Sánchez Martín",
+  "license": "ISC",
+  "dependencies": {
+    "colors": "^1.4.0"
+  }
+}

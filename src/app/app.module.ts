@@ -7,6 +7,7 @@ import { HeaderComponent } from './component/header/header.component';
 import { FooterComponent } from './component/footer/footer.component';
 import { HomeComponent } from './pages/home/home.component';
 import { RegisterComponent } from './pages/register/register.component';
+import { ProfileComponent } from './pages/profile/profile.component';
 
 
 @NgModule({
@@ -16,6 +17,7 @@ import { RegisterComponent } from './pages/register/register.component';
     FooterComponent,
     HomeComponent,
     RegisterComponent,
+    ProfileComponent,
     
   ],
   imports: [
