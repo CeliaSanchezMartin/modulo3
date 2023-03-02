@@ -8,6 +8,8 @@ import { FooterComponent } from './component/footer/footer.component';
 import { HomeComponent } from './pages/home/home.component';
 import { RegisterComponent } from './pages/register/register.component';
 import { ProfileComponent } from './pages/profile/profile.component';
+import { BooksComponent } from './pages/books/books.component';
+import { PipeRefPipe } from './pipes/pipe-ref.pipe';
 
 
 @NgModule({
@@ -18,6 +20,8 @@ import { ProfileComponent } from './pages/profile/profile.component';
     HomeComponent,
     RegisterComponent,
     ProfileComponent,
+    BooksComponent,
+    PipeRefPipe,
     
   ],
   imports: [

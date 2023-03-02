@@ -39,6 +39,14 @@
     align-items: center;
     gap: 7%;
 }
+.content1{
+    width: 75%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 11%;
+}
 .container{
     height: 5vh;
     width: 13vw;
@@ -50,6 +58,8 @@
     justify-content: center;
     align-items: center;
 }
+
+
 /* IMput*/
 .input {
     

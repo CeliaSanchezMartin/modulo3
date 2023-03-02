@@ -1,0 +1,213 @@
+.container{
+    width: 100%;
+    height: 80vh;
+    background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),url(src/assets/fondo4.jpg) ;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.content-cards{
+    padding: 0px 10%;
+    display: flex;
+    justify-content: start;
+    flex-wrap: wrap;
+    margin-bottom: 80px;
+}
+/*CARDS*/
+.card {
+    box-shadow: 5px 5px 20px;
+    border-radius: 10px;
+    width: 20%;
+    margin: 40px 4.165%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    
+}
+
+.card__img {
+    
+    width: 100%;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    display: flex;
+    justify-content: end;
+    
+}
+
+.card__front_page_type {
+    padding: 10px 15px;
+}
+
+.line__separation {
+    display: flex;
+    justify-content: center;
+}
+
+hr {
+    display: flex;
+    justify-content: center;
+    height: 1px;
+    width: 95%;
+    background-color: black;
+}
+
+.card__book_title {
+    padding: 5px 15px;
+    color:var(--mygreen);
+    font-size: 20px;
+}
+
+.card__book_autor {
+    padding: 1px 15px;
+}
+
+.card__book_ref {
+    padding: 5px 15px;
+}
+
+.card__book_price {
+    padding: 10px ;
+    display: flex;
+    justify-content: center;
+    font-size: 25px;
+    font-weight: bolder;
+}
+
+
+.form_comprar {
+    
+    font-size: 1.2rem;
+    padding: 0.7em;
+    border-radius: 5px;
+    color: white;
+    background-color: var(--mygreen);
+    border: 1px dashed var(--mygreen);
+    cursor: pointer;
+    position: relative;
+    width: 50%;
+    left: 25%;
+    bottom: 10px;
+  }
+  
+  .form_comprar:hover {
+    color: var(--mygreen);
+    background-color: white;
+    border: 1px dashed var(--mygreen);
+    cursor: pointer;
+    transition: 0.5s;
+  }
+
+  .form_comprar_grey {
+    
+    font-size: 1.2rem;
+    padding: 0.7em;
+    border-radius: 5px;
+    color: white;
+    background-color: grey;
+    border: 1px dashed var(grey);
+    cursor: pointer;
+    position: relative;
+    width: 50%;
+    left: 25%;
+    bottom: 10px;
+  }
+  
+  .form_comprar_grey:hover {
+    color: var(grey);
+    background-color: white;
+    border: 1px dashed var(grey);
+    cursor: pointer;
+    transition: 0.5s;
+  }
+
+
+
+
+.no_content{
+    padding-top: 40px;
+    height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    font-size: 40px;
+}
+  /*FIN CARDS*/
+.container-form{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 5%;
+
+}
+.container-form-h1{
+    text-align: center;
+    color: white;
+    font-size: 3rem;
+    position: relative;
+    bottom: 40px;
+
+}
+.container-form-campos{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    
+}
+
+.input {
+    
+    font-weight: 500;
+    font-size: .8vw;
+    color: white;
+    background: none;
+    box-shadow: 0 0 .4vw rgba(255, 255, 255, 0.5), 0 0 0 .15vw ;
+    border-radius: 0.4vw;
+    border: none;
+    outline: none;
+    padding: 0.8vw;
+    width: 300px;
+    transition: .4s;
+
+
+  }
+  
+  .input:hover {
+    box-shadow: 0 0 0 .15vw var(--mygreen);
+  }
+  
+  .input:focus {
+    box-shadow: 0 0 0 .15vw var(--mygreen) ;
+  }
+
+  .form--submit {
+    font-size: 1.3rem;
+    width: 200px;
+    padding: 0.7em;
+    border-radius: 5px;
+    color: white;
+    background-color: var(--mygreen);
+    border: 1px dashed var(--mygreen);
+    cursor: pointer;
+
+    position: relative;
+    top: 30px;
+  }
+  
+  .form--submit:hover {
+    color: var(--mygreen);
+    background-color: white;
+    border: 1px dashed var(--mygreen);
+    cursor: pointer;
+    transition: 0.5s;
+  }
+
+

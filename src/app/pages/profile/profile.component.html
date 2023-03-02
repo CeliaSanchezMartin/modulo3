@@ -1,6 +1,6 @@
 <main class="main">
     <div class="card">
-        <img src={{myUser.photo}} alt="perfil">
+        <img src="{{myUser.photo}}" alt="perfil">
         <h1>{{myUser.nombreCompleto()}}</h1>
         <div class="content">
             <h2>Nombre</h2>
@@ -10,9 +10,9 @@
             <h2>Apellido</h2>
             <div class="container">{{myUser.last_name}}</div>
         </div> 
-        <div class="content">
+        <div class="content1">
             <h2>Correo </h2>
-            <div class="container">{{myUser.email}}</div>
+            <div class="container" style="gap: 100px;">{{myUser.email}}</div>
         </div>   
     </div>
 
@@ -21,8 +21,8 @@
         <input type="text" name="text" class="input"  placeholder="Nombre" #newName>
         <input type="text" name="text" class="input" placeholder="Apellido" #newLastName>
         <input type="text" name="text" class="input" placeholder="Correo" #newCorreo>
-        <input type="text" name="text" class="input" placeholder="URL" #newurl>
-        <button type="button" class="form--submit" (click) = "modificar(newName, newLastName, newCorreo, newurl)">
+        <input type="text" name="text" class="input" placeholder="URL" #nuevoUrl>
+        <button type="button" class="form--submit" (click) = "modificar(newName, newLastName, newCorreo, nuevoUrl)">
            Modificar
         </button>
     </div>

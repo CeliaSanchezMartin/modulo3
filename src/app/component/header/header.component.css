@@ -17,7 +17,9 @@
  }
 
  .menu{
-    width: 25%;
+    width: 30%;
+    position: relative;
+    right: 70px;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
@@ -25,7 +27,7 @@
 
  }
   .menu a{
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     text-decoration: none;
     color: white;
   }
