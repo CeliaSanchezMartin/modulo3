@@ -9,6 +9,7 @@ import { Books } from 'src/app/models/books';
 export class CardComponent {
   @Input() newBook: Books;
   @Input() newLibros: Books [];
+  @Input() isEven: boolean;
 
   @Output() eventoBook = new EventEmitter<Books>();
 

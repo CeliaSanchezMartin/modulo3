@@ -1,7 +1,7 @@
 
 <div class="content-cards" *ngIf="libros.length != 0; else esfalso">
     <ng-container *ngFor="let book1 of libros; let par = even" >
-        <app-card [newBook] = "book1" (eventoBook)="book_Deleted($event)"></app-card>
+        <app-card [newBook] = "book1" [isEven] = "par" (eventoBook)="book_Deleted($event)"></app-card>
     </ng-container>
     <!--
         <div class="card" *ngFor="let book1 of libros; let i = index">

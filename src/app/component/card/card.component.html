@@ -26,7 +26,7 @@
             <p>{{newBook.price}}€</p>
         </div>
         <div class="card_button_buy">
-            <button type="button" [ngClass]=" 'form_comprar'" >Comprar</button>
+            <button type="button" [ngClass]=" isEven ? 'form_comprar' : 'form_comprar_grey'" >Comprar</button>
         </div>
     </div>
 
