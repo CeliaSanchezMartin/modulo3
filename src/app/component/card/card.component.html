@@ -1,0 +1,32 @@
+
+
+    <div class="card">
+        
+        <div class="card__img">
+            <button type="button" (click)="delete_Book()" class="button_delete">X</button>   
+            <img src="{{newBook.photo}}"
+                alt="Portada de libro" class="card__img">
+        </div>
+        <div class="card__front_page_type">
+            <p>{{newBook.type}}</p>
+        </div>
+        <div class="line__separation">
+            <hr>
+        </div>
+        <div class="card__book_title">
+            <p>{{newBook.title}}</p>
+        </div>
+        <div class="card__book_autor">
+            <p>Autor: {{newBook.author}}</p>
+        </div>
+        <div class="card__book_ref">
+            <p>{{newBook.id_book | pipeRef}}</p>
+        </div>
+        <div class="card__book_price">
+            <p>{{newBook.price}}€</p>
+        </div>
+        <div class="card_button_buy">
+            <button type="button" [ngClass]=" 'form_comprar'" >Comprar</button>
+        </div>
+    </div>
+

@@ -1,36 +1,29 @@
-.container{
-    width: 100%;
-    height: 80vh;
-    background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),url(src/assets/fondo4.jpg) ;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-.content-cards{
-    width: 100%;
-    padding: 50px;
-    display: flex;
-    justify-content: start;
-    flex-wrap: wrap;
-    gap: 5%;
-    
-    margin-bottom: 80px;
-}
+
 /*CARDS*/
 .card {
     box-shadow: 5px 5px 20px;
     border-radius: 10px;
-    width: 20%;
+    width: 300px;
     margin: 40px 4.165%;
 
     display: flex;
     flex-direction: column;
     justify-content:center;
     
+}
+.button_delete {
+
+    position: absolute;
+
+    padding: 5px;
+    border-radius: 15%;
+    width: 40px;
+    color: white;
+    background-color: rgb(122, 120, 120, 0.9);
+    border: 1px solid grey;
+    font-weight: bolder;
+    font-size: 24px;
+    cursor: pointer;
 }
 
 .card__img {
@@ -140,77 +133,3 @@ hr {
     align-items: start;
     font-size: 40px;
 }
-  /*FIN CARDS*/
-.container-form{
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    gap: 5%;
-
-}
-.container-form-h1{
-    text-align: center;
-    color: white;
-    font-size: 3rem;
-    position: relative;
-    bottom: 40px;
-
-}
-.container-form-campos{
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 15px;
-    
-}
-
-.input {
-    
-    font-weight: 500;
-    font-size: .8vw;
-    color: white;
-    background: none;
-    box-shadow: 0 0 .4vw rgba(255, 255, 255, 0.5), 0 0 0 .15vw ;
-    border-radius: 0.4vw;
-    border: none;
-    outline: none;
-    padding: 0.8vw;
-    width: 300px;
-    transition: .4s;
-
-
-  }
-  
-  .input:hover {
-    box-shadow: 0 0 0 .15vw var(--mygreen);
-  }
-  
-  .input:focus {
-    box-shadow: 0 0 0 .15vw var(--mygreen) ;
-  }
-
-  .form--submit {
-    font-size: 1.3rem;
-    width: 200px;
-    padding: 0.7em;
-    border-radius: 5px;
-    color: white;
-    background-color: var(--mygreen);
-    border: 1px dashed var(--mygreen);
-    cursor: pointer;
-
-    position: relative;
-    top: 30px;
-  }
-  
-  .form--submit:hover {
-    color: var(--mygreen);
-    background-color: white;
-    border: 1px dashed var(--mygreen);
-    cursor: pointer;
-    transition: 0.5s;
-  }
-
-

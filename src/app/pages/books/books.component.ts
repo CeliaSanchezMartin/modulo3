@@ -24,5 +24,11 @@ export class BooksComponent {
     console.log(this.libros)
   }
 
+  book_Deleted(libro: Books){
 
+    let nuevoLibros = this.libros.filter(book => book.id_book != libro.id_book)
+
+    this.libros = nuevoLibros;
+  }
+  
 }
