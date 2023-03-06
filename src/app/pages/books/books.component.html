@@ -1,3 +1,12 @@
+<div class="search_container">
+    
+    <form class="input_search">
+        <input type="text" placeholder="Buscador de libros" class="buscador--text" #input_search>
+        <button type="button"  class="form-search" (click)="search(input_search.value)">Search</button>
+    </form>
+
+</div>
+
 
 <div class="content-cards" *ngIf="libros.length != 0; else esfalso">
     <ng-container *ngFor="let book1 of libros; let par = even" >
@@ -38,7 +47,7 @@
     <ng-template #esfalso >
         <div class="no_content">Todavía no hay ningún libro en la colección</div>
     </ng-template> 
-    
+<!-- 
 <div class="container">
     <div class="container-form">
         <div class="container-form-h1">
@@ -58,4 +67,4 @@
     </div>
 
 </div>
-
+-->

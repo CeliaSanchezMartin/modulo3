@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Books } from 'src/app/models/books';
+import { BooksService } from 'src/app/shared/books.service';
 
 @Component({
   selector: 'app-books',
@@ -11,9 +12,8 @@ export class BooksComponent {
   public libros: Books[];
   
 
-  constructor(){
-
-    this.libros = [new Books(1,1,"La Verdad Sobre el caso de Harry Quebert","Tapa Blanda","Joël Dicker",22,"https://imagessl5.casadellibro.com/a/l/t7/65/9788420414065.jpg")];
+  constructor(public bookService: BooksService){
+    this.libros = bookService.getAll()
     
   }
 
@@ -26,9 +26,14 @@ export class BooksComponent {
 
   book_Deleted(libro: Books){
 
-    let nuevoLibros = this.libros.filter(book => book.id_book != libro.id_book)
+    let newLibros = this.libros.filter(book => book.id_book != libro.id_book)
 
-    this.libros = nuevoLibros;
+    this.libros = newLibros;
+  }
+
+
+  public search(newRef:number){
+    this.libros = [this.bookService.getOne(newRef)]
   }
   
 }

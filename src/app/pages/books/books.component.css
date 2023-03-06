@@ -10,6 +10,47 @@
     justify-content: center;
     align-items: center;
 }
+/*Buscador*/
+.search_container {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+
+.input_search {
+  border: 2px solid grey;
+  border-radius: 5px;
+  padding: 10px;
+  height: 40px;
+  width: fit-content;
+  /* background-color: white; */
+  display: flex;
+  align-items: center;
+}
+
+.buscador--text {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  border: 0;
+  height: 30px;
+  width: 200px;
+
+}
+.form-search {
+    
+  font-size: 1rem;
+  padding: 0.3em;
+  border-radius: 5px;
+  color: white;
+  background-color: var(--mygreen);
+  border: 1px dashed var(--mygreen);
+  cursor: pointer;
+  width: 30%;
+  height: 30px;
+  
+}
+
 .content-cards{
     width: 100%;
     padding: 50px;

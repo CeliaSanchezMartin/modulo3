@@ -1,0 +1,19 @@
+<div class="container">
+    <div class="container-form">
+        <div class="container-form-h1">
+            Modificar Libro
+        </div>
+        <form action="" class="container-form-campos">
+            <input type="text" name="text" class="input"  placeholder="Título" #newTitle>
+            <input type="text" name="text" class="input" placeholder="Tapa blanda/dura" #newType>
+            <input type="text" name="text" class="input" placeholder="Autor" #newAuthor>
+            <input type="number" name="text" class="input" placeholder="Precio" #newPrice>
+            <input type="text" name="text" class="input" placeholder="Foto" #newPhoto>
+            <input type="number" name="number" class="input" placeholder="Código Libro" #newRef>
+            <button type="button" class="form--submit" (click)="modify_book(newRef.value, newTitle.value, newType.value, newAuthor.value, newPrice.value, newPhoto.value)" >
+                 Modificar Libro
+            </button>
+        </form>
+    </div>
+
+</div>
