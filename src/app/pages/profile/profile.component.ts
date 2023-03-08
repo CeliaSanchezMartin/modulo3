@@ -21,5 +21,7 @@ export class ProfileComponent {
     this.myUser.last_name = nuevoApp.value;
     this.myUser.email = nuevoCorreo.value;
     this.myUser.photo = nuevoUrl.value;
+
+    alert("El ususario se ha modificado")
   }
 }

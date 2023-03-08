@@ -1,0 +1,43 @@
+<div class = "contenido">
+    <div class = "main">
+     <form class ="mb-4" #userForm="ngForm" (ngSubmit)="onSubmit(userForm)" >
+      <div class="form-group mt-3">
+        <label>Nombre</label>
+        <input type="text" class="form-control" style="width: 250px; margin-top: 10px;"  name="name" [(ngModel)]="user.name" #nameId="ngModel"
+        [ngClass]="{ 'is-invalid': (nameId.dirty || nameId.touched) && nameId.invalid }" required>
+        <div *ngIf="(nameId.dirty || nameId.touched) && nameId.invalid" class="invalid-feedback">
+          <p *ngIf="nameId.errors.required">El nombre es obligatorio</p>
+        </div>
+      </div>
+    
+      
+    
+      <div class="form-group mt-4">
+        <label>Password</label>
+        <input type="password" class="form-control"  style="width: 250px;margin-top: 10px;" name="password" [(ngModel)]="user.password" #passwordId="ngModel"
+        [ngClass]="{ 'is-invalid': (passwordId.dirty || passwordId.touched) && passwordId.invalid }" minlength="8" required>
+        <div *ngIf="(passwordId.dirty || passwordId.touched) && passwordId.invalid" class="invalid-feedback">
+          <div *ngIf="passwordId.errors.required">La clave es obligatoria</div>
+          <div *ngIf="passwordId.errors.minlength">La clave debe tener al menos 8 caracteres</div>
+        </div>
+      </div>
+    
+     
+      
+     
+      <div class="form-group mt-4">
+        <button class="btn btn-success mt-2 btn-block position-absolute  start-50 translate-middle " [disabled]="userForm.invalid">Submit</button>
+      </div> 
+  
+     </form> 
+  
+    </div>
+  </div>
+  
+  
+      <!-- <div class="form-group">
+        <button type ="button" class="btn btn-warning btn-block" (click)="register(nameId.value)" [disabled]="userForm.invalid>Otro</button>
+      </div >-->
+  
+  
+    

@@ -29,11 +29,20 @@ export class BooksComponent {
     let newLibros = this.libros.filter(book => book.id_book != libro.id_book)
 
     this.libros = newLibros;
+    alert("Libro eliminado")
   }
 
 
   public search(newRef:number){
-    this.libros = [this.bookService.getOne(newRef)]
+    let result:Books[];
+    result = this.bookService.getOne(newRef);
+    if(result.length !== 0){
+      this.libros = result;
+    } else {
+      this.libros = this.bookService.getAll();
+      alert("Este libro no existe")
+    }
+
   }
   
 }

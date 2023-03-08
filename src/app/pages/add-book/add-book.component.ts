@@ -17,7 +17,8 @@ export class AddBookComponent {
   }
 
   public add_book(newRef: number, newTitle: string, newType: string, newAuthor: string, newPrice: number, newPhoto:string){
-    this.bookService.add(new Books(newRef, 0, newTitle, newType, newAuthor, newPrice, newPhoto))
+    this.bookService.add(new Books(newRef, 0, newTitle, newType, newAuthor, newPrice, newPhoto));
+    alert("Libro añadido")
 
     
      

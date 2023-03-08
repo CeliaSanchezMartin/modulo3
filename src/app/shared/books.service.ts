@@ -16,15 +16,15 @@ export class BooksService {
     return this.book;
   };
 
-  public getOne(id_libro: number):Books{
-    let result:Books;
+  public getOne(id_libro: number):Books []{
+    let result:Books [] = [];
     for(let i:number = 0; i < this.book.length; i++){
       if(this.book[i].id_book == id_libro){
-        result = this.book[i];
+        result.push(this.book[i]);
       };
       
     }
-    return result;
+    return result
   }
 
   public add(libro:Books):void{

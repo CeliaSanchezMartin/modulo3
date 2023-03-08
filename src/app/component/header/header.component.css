@@ -31,3 +31,7 @@
     text-decoration: none;
     color: white;
   }
+
+  .activo{
+   border-bottom: 2px solid white;
+  }
