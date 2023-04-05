@@ -1,5 +1,6 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { Books } from 'src/app/models/books';
+import { BooksService } from 'src/app/shared/books.service';
 
 @Component({
   selector: 'app-card',
@@ -13,7 +14,7 @@ export class CardComponent {
 
   @Output() eventoBook = new EventEmitter<Books>();
 
-  constructor(){
+  constructor(public bookService: BooksService){
 
   }
   delete_Book(){

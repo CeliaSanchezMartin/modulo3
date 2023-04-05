@@ -3,13 +3,13 @@
         <h1>MyBooks</h1>
     </div>
     <div class="menu">
-        <a routerLink="/home" routerLinkActive = "activo"> HOME </a>
-        <a routerLink="/AddBook" routerLinkActive = "activo">AddBook</a>
-        <a routerLink="/UpdateBook" routerLinkActive = "activo">UpdateBook</a>
-        <a routerLink="/books" routerLinkActive = "activo"> Books </a>
-        <a routerLink="/register" routerLinkActive = "activo"> Register </a>
-        <a routerLink="/profile" routerLinkActive = "activo"> Profile </a>
-        <a routerLink="/login" routerLinkActive = "activo"> Login</a>
+        <a routerLink="/home" routerLinkActive = "activo" *ngIf="!this.userService.logueado"> HOME </a>
+        <a routerLink="/AddBook" routerLinkActive = "activo" *ngIf="this.userService.logueado">AddBook</a>
+        <a routerLink="/UpdateBook" routerLinkActive = "activo" *ngIf="this.userService.logueado">UpdateBook</a>
+        <a routerLink="/books" routerLinkActive = "activo" *ngIf="this.userService.logueado"> Books </a>
+        <a routerLink="/register" routerLinkActive = "activo" *ngIf="!this.userService.logueado"> Register </a>
+        <a routerLink="/profile" routerLinkActive = "activo" *ngIf="this.userService.logueado"> Profile </a>
+        <a routerLink="/login" routerLinkActive = "activo" *ngIf="!this.userService.logueado"> Login</a>
         
     </div>
 

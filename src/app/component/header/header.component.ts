@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { RouterLinkActive } from '@angular/router';
+import { UsuarioService } from 'src/app/shared/user.service';
 
 @Component({
   selector: 'app-header',
@@ -7,5 +8,7 @@ import { RouterLinkActive } from '@angular/router';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent {
+
+  constructor (public userService: UsuarioService  ){}
 
 }

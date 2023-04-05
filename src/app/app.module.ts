@@ -1,6 +1,8 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule,ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+//import { ToastrModule } from 'ngx-toastr';
 
 
 import { AppRoutingModule } from './app-routing.module';
@@ -17,6 +19,7 @@ import { AddBookComponent } from './pages/add-book/add-book.component';
 import { UpdateBookComponent } from './pages/update-book/update-book.component';
 import { LoginComponent } from './pages/login/login.component';
 import { FormLoginComponent } from './component/form-login/form-login.component';
+import { FormregisterComponent } from './component/formregister/formregister.component';
 
 
 @NgModule({
@@ -34,6 +37,7 @@ import { FormLoginComponent } from './component/form-login/form-login.component'
     UpdateBookComponent,
     LoginComponent,
     FormLoginComponent,
+    FormregisterComponent,
     
   ],
   imports: [
@@ -41,6 +45,8 @@ import { FormLoginComponent } from './component/form-login/form-login.component'
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
+    HttpClientModule,
+    //ToastrModule.forRoot()
     
   ],
   providers: [],
