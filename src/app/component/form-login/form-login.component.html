@@ -3,8 +3,8 @@
      <form class ="mb-4" #userForm="ngForm" (ngSubmit)="onSubmit(userForm)" >
       <div class="form-group mt-3">
         <label>Nombre</label>
-        <input type="text" class="form-control" style="width: 250px; margin-top: 10px;"  name="name" [(ngModel)]="user.name" #nameId="ngModel"
-        [ngClass]="{ 'is-invalid': (nameId.dirty || nameId.touched) && nameId.invalid }" required>
+        <input type="text" class="form-control" style="width: 250px; margin-top: 10px;"  name="name" [(ngModel)]="this.user.name" #nameId="ngModel"
+        [ngClass]="{ 'is-invalid': (nameId.dirty || nameId.touched) && nameId.invalid }" name required>
         <div *ngIf="(nameId.dirty || nameId.touched) && nameId.invalid" class="invalid-feedback">
           <p *ngIf="nameId.errors.required">El nombre es obligatorio</p>
         </div>
@@ -14,7 +14,7 @@
     
       <div class="form-group mt-4">
         <label>Password</label>
-        <input type="password" class="form-control"  style="width: 250px;margin-top: 10px;" name="password" [(ngModel)]="user.password" #passwordId="ngModel"
+        <input type="password" class="form-control"  style="width: 250px;margin-top: 10px;" name="password" [(ngModel)]="this.user.password" #passwordId="ngModel"
         [ngClass]="{ 'is-invalid': (passwordId.dirty || passwordId.touched) && passwordId.invalid }" minlength="8" required>
         <div *ngIf="(passwordId.dirty || passwordId.touched) && passwordId.invalid" class="invalid-feedback">
           <div *ngIf="passwordId.errors.required">La clave es obligatoria</div>

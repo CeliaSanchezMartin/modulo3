@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { Books } from 'src/app/models/books';
 import { BooksService } from 'src/app/shared/books.service';
 import { Respuesta } from 'src/app/models/respuesta';
+import { UsuarioService } from 'src/app/shared/user.service';
 //import { ToastrService } from 'ngx-toastr';
 
 @Component({
@@ -14,13 +15,13 @@ export class BooksComponent {
   public libros: Books[];
   
 
-  constructor(public bookService: BooksService, /*private toastr: ToastrService*/){
-    this.libros = [];
-    this.bookService.getAll().subscribe((resp:Respuesta) => {
+  constructor(public bookService: BooksService, /*private toastr: ToastrService*/ private userService: UsuarioService){
+    //this.libros = [];
+    this.bookService.getAll().subscribe((data: any) => {
       
-      console.log(resp.data);
+      console.log(data);
       
-      this.libros = resp.data;
+      this.libros = data;
 
     })
   }
@@ -35,37 +36,42 @@ export class BooksComponent {
   public book_Deleted(newBook: Books){
     console.log(newBook);
     
-    this.bookService.delete(newBook.id_book).subscribe((resp: Respuesta) => {
+    this.bookService.delete(newBook.id_book).subscribe((data) => {
+      this.bookService.getAll().subscribe((data:any) => {
+        console.log(data);
+        this.libros = data
+        
+      })
 
-      if(!resp.error) {
+      // if(!resp.error) {
 
-        this.libros = resp.data
+      //   this.libros = resp.data
 
-        alert("El libro se ha eliminado");
+      //   alert("El libro se ha eliminado");
 
-      }
-    })
+      })
+    }
 
-  }
+  
 
 
   public search(newRef:number){
 
     if (newRef == 0) {
 
-      this.bookService.getAll().subscribe((resp: Respuesta) =>{
+      this.bookService.getAll().subscribe((data) =>{
         console.log("data1");
         
-        this.libros = resp.data;
+        this.libros = data ['data'];
 
       })
 
     } else {
 
-      this.bookService.getOne(newRef).subscribe((resp:Respuesta) => {
+      this.bookService.getOne(newRef).subscribe((data) => {
 
 
-        let libroDevuelto:Books[] = resp.data
+        let libroDevuelto:Books[] = data['data']
 
         if(newRef != undefined){
 

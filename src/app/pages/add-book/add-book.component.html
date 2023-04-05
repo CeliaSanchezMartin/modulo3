@@ -9,8 +9,9 @@
             <input type="text" name="text" class="input" placeholder="Autor" #newAuthor>
             <input type="number" name="text" class="input" placeholder="Precio" #newPrice>
             <input type="text" name="text" class="input" placeholder="Foto" #newPhoto>
-            <input type="number" name="number" class="input" placeholder="Código Libro" #newRef>
-            <button type="button" class="form--submit" (click)="add_book(newRef.value, newTitle.value, newType.value, newAuthor.value, newPrice.value, newPhoto.value)">
+            <!--
+            <input type="number" name="number" class="input" placeholder="Código Libro" #newRef> -->
+            <button type="button" class="form--submit" (click)="add_book(newTitle.value, newType.value, newAuthor.value, newPrice.value, newPhoto.value)">
                 Insertar Libro
             </button>
         </form>

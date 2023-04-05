@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { Books } from 'src/app/models/books';
 import { BooksService } from 'src/app/shared/books.service';
 import { Respuesta } from 'src/app/models/respuesta';
+import { UsuarioService } from 'src/app/shared/user.service';
 //import { ToastrService } from 'ngx-toastr';
 
 @Component({
@@ -10,30 +11,31 @@ import { Respuesta } from 'src/app/models/respuesta';
   styleUrls: ['./update-book.component.css']
 })
 export class UpdateBookComponent {
-  public libros: Books[];
+  //public libros: Books[];
   
 
-  constructor(public bookService: BooksService, /*private toastr: ToastrService */){
+  constructor(public bookService: BooksService, /*private toastr: ToastrService */ public userService: UsuarioService){
   }
 
   public modify_book(newRef: number, newTitle: string, newType: string, newAuthor: string, newPrice: number, newPhoto:string){
 
-    let libroNuevo = new Books (newRef, newTitle, newType, newAuthor, newPrice, newPhoto);
+    let libroNuevo = new Books (newRef, newTitle, newType, newAuthor, newPrice, newPhoto, this.userService.user.id_user);
     console.log(libroNuevo);
     
-    this.bookService.edit(libroNuevo).subscribe((answer: Respuesta) => {
+    this.bookService.edit(libroNuevo).subscribe((data) => {
+       
+        alert("El libro " + libroNuevo.title + " se ha modificado con exito");
+      // if(!answer.error){
+      //   this.bookService.book = answer.data[0]
 
-      if(!answer.error){
-        this.bookService.book = answer.data[0]
+      //   alert("El libro ha sido modificado con exito")
+      //   alert("El libro no ha sido encontrado")
 
-        alert("El libro ha sido modificado con exito")
-        alert("El libro no ha sido encontrado")
+      // } else {
 
-      } else {
-
-        alert("El libro no ha sido encontrado")
+      //   alert("El libro no ha sido encontrado")
         
-      }
+      // }
     })
     /*
     let result:Books[];

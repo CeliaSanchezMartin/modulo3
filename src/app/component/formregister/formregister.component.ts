@@ -2,6 +2,8 @@ import { Component } from '@angular/core';
 import { FormGroup, FormBuilder, Validators, AbstractControl } from '@angular/forms';
 import { UsuarioService } from 'src/app/shared/user.service';
 import { User } from 'src/app/models/user';
+import { Router } from '@angular/router';
+import { UserResp } from 'src/app/models/user-resp';
 
 @Component({
   selector: 'app-formregister',
@@ -12,7 +14,7 @@ export class FormregisterComponent {
   public myForm: FormGroup;
   //public user: User;
 
-  constructor(private formBuilder: FormBuilder, private userService: UsuarioService) 
+  constructor(private formBuilder: FormBuilder, private userService: UsuarioService, public router: Router) 
   { 
     this.buildForm();
   }
@@ -21,8 +23,15 @@ export class FormregisterComponent {
   {
     const user = this.myForm.value;
     console.log(user);
-    this.userService.register(user).subscribe((data)=>{
+    this.userService.register(user).subscribe((data: UserResp)=>{
       console.log(data);
+
+      if(data.mensaje != "-1"){
+        this.router.navigate(["/loginPage"]);
+        alert("Te has registrado correctamente");
+      } else {
+        alert("Fallo al registrarte")
+      }
       
       
     });
@@ -36,7 +45,9 @@ export class FormregisterComponent {
       nombre: [, Validators.required],
       apellido:[, Validators.required],
       email: [, [ Validators.required, Validators.email]],
+      foto:[, Validators.required],
       password:[, [Validators.required, Validators.minLength(minPassLength)]],
+      password2:[, [Validators.required, this.checkPasswords]]
       
     
     });
@@ -53,9 +64,9 @@ export class FormregisterComponent {
     return resultado;
   }
 
-  ngOnInit(): void 
-  {
-  }
+  //ngOnInit(): void 
+  //{
+  //}
 
 }
 
